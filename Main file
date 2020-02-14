@@ -61,3 +61,12 @@ First < Min1.
 findMin([First|Rest], Min1) :-
 findMin(Rest, Min1), 
 First >= Min1.
+
+common-uni-flat([], _, []).
+
+common-uni-flat([H1|T1], L2, [H1|Res]) :-
+    member(H1, L2),
+    common-uni-flat(T1, L2, Res).
+
+common-uni-flat([_|T1], L2, Res) :-
+    common-uni-flat(T1, L2, Res).
