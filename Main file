@@ -49,3 +49,8 @@ min-above-min(L1, L2, N) :-
 %Find the min in L2 with findMin 
 findMin(L2, Min2),
 include(findLarger(Min2), L1, MinL1),
+
+findMin(MinL1, N).
+findLarger(Val, N) :- 
+N > Val.
+findMin([First], First).
