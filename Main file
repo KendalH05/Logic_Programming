@@ -9,3 +9,10 @@ list-chars([X|Xs], N) :-
 
         succ(N0, N)
     ).
+
+sum-up-numbers-simple([], 0).  
+
+sum-up-numbers-simple([L | LRest], Result) :-  
+	number(L),
+	sum-up-numbers-simple(LRest, LRestResult),
+	Result is L + LRestResult.
