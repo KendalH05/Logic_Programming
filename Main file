@@ -26,6 +26,7 @@ sum-up-numbers-simple([L | LRest], 0) :-  % the list is all non-number elements 
 	list-chars([L | LRest], M),
 	M == N.
 	
+	
 % FUNCTION 2	
 my-flatten([],[]).
 
