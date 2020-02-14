@@ -54,3 +54,10 @@ findMin(MinL1, N).
 findLarger(Val, N) :- 
 N > Val.
 findMin([First], First).
+
+findMin([First|Rest], First) :-
+findMin(Rest, Min1), 
+First < Min1.
+findMin([First|Rest], Min1) :-
+findMin(Rest, Min1), 
+First >= Min1.
