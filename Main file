@@ -43,3 +43,9 @@ sum-up-numbers-general([],0).
 sum-up-numbers-general([L|Ls], Result) :-
         my-flatten([L|Ls],FlatL),
         sum-up-numbers-simple(FlatL, Result).
+
+% Function 3
+min-above-min(L1, L2, N) :-
+%Find the min in L2 with findMin 
+findMin(L2, Min2),
+include(findLarger(Min2), L1, MinL1),
