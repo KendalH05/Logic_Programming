@@ -16,3 +16,7 @@ sum-up-numbers-simple([L | LRest], Result) :-
 	number(L),
 	sum-up-numbers-simple(LRest, LRestResult),
 	Result is L + LRestResult.
+	
+sum-up-numbers-simple([L | LRest], LRestResult) :- 
+	\+(number(L)),
+	sum-up-numbers-simple(LRest, LRestResult).
