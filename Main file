@@ -62,6 +62,7 @@ findMin([First|Rest], Min1) :-
 findMin(Rest, Min1), 
 First >= Min1.
 
+% Function 4
 common-uni-flat([], _, []).
 
 common-uni-flat([H1|T1], L2, [H1|Res]) :-
